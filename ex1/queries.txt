@@ -1,0 +1,9 @@
+db.contratos.countDocuments()
+
+db.contratos.find({tipoprocedimento:"Ajuste Direto Regime Geral"}).count()
+
+db.contratos.distinct("entidade_comunicante").sort()
+
+db.contratos.aggregate([{$group:{_id:"$tipoprocedimento",totalContratos:{$sum:1}}}])
+
+db.contratos.aggregate([{$group:{_id:"$entidade_comunicante",montante:{$sum:"$precoContratual"}}}])

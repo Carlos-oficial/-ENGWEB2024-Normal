@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+  h1= "contrato nº "+ contrato.idcontrato
+  h2
+    a(href="/")= "Home"
+  p= "id: " + contrato.idcontrato
+  p= "nAnuncio: " + contrato.nAnuncio 
+  p= "tipoprocedimento: " + contrato.tipoprocedimento
+  p= "objectoContrato: " + contrato.objectoContrato
+  p= "dataPublicacao: " + contrato.dataPublicacao
+  p= "dataCelebracaoContrato: " + contrato.dataCelebracaoContrato
+  p= "precoContratual: " + contrato.precoContratual
+  p= "prazoExecucao: " + contrato.prazoExecucao
+  p= "NIPC_entidade_comunicante: " + contrato.NIPC_entidade_comunicante
+  p= "entidade_comunicante: " + contrato.entidade_comunicante
+  p= "fundamentacao: " + contrato.fundamentacao
